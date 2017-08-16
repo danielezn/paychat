@@ -13,7 +13,7 @@ class App extends Component {
 			<div className="container">
 			  <div className="row">
 			    <div className="col-md-5">
-			      <label className="control-label" for="name">Name</label>
+			      <label className="control-label">Name</label>
 			      <div className="row">
 			        <div className="col-md-6">
 			          <input id="name" name="name" className="form-control" type="text"/>
@@ -25,7 +25,7 @@ class App extends Component {
 			      </div>
 			      <br/>
 			      <br/>
-			      <label className="control-label" for="peer">Peer</label>
+			      <label className="control-label">Peer</label>
 			      <div className="row">
 			        <div className="col-md-6">
 			          <input id="peer" name="peer" className="form-control" type="text"/>
@@ -41,10 +41,10 @@ class App extends Component {
 			    </div>
 			    <div className="col-md-7">
 			      <div id="videoBig">
-			        <video id="videoOutput" autoplay width="640px" height="480px"></video>
+			        <video id="videoOutput" autoPlay width="640px" height="480px"></video>
 			      </div>
 			      <div id="videoSmall">
-			        <video id="videoInput" autoplay width="240px" height="180px"></video>
+			        <video id="videoInput" autoPlay width="240px" height="180px"></video>
 			      </div>
 			    </div>
 			  </div>

@@ -2,7 +2,7 @@
 import kurentoUtils from 'kurento-utils';
 import $ from "jquery";
 
-var ws = new WebSocket('wss://localhost:8443/one2one');
+var ws = new WebSocket('wss://0.0.0.0:8443/one2one');
 var videoInput;
 var videoOutput;
 var webRtcPeer;
@@ -13,7 +13,7 @@ const REGISTERING = 1;
 const REGISTERED = 2;
 var registerState = null
 
-function setRegisterState(nextState) {
+const setRegisterState = (nextState) => {
   switch (nextState) {
   case NOT_REGISTERED:
     $('#register').attr('disabled', false);
@@ -41,7 +41,7 @@ const PROCESSING_CALL = 1;
 const IN_CALL = 2;
 var callState = null
 
-function setCallState(nextState) {
+const setCallState = (nextState) => {
   switch (nextState) {
   case NO_CALL:
     $('#call').attr('disabled', false);
@@ -114,7 +114,7 @@ ws.onmessage = function(message) {
   }
 }
 
-function resgisterResponse(message) {
+const resgisterResponse = (message) => {
   if (message.response == 'accepted') {
     setRegisterState(REGISTERED);
   } else {
@@ -126,7 +126,7 @@ function resgisterResponse(message) {
   }
 }
 
-function callResponse(message) {
+const callResponse = (message) => {
   if (message.response != 'accepted') {
     //console.info('Call not accepted by peer. Closing call');
     var errorMessage = message.message ? message.message
@@ -139,12 +139,12 @@ function callResponse(message) {
   }
 }
 
-function startCommunication(message) {
+const startCommunication = (message) => {
   setCallState(IN_CALL);
   webRtcPeer.processAnswer(message.sdpAnswer);
 }
 
-function incomingCall(message) {
+const incomingCall = (message) => {
   // If bussy just reject without disturbing user
   if (callState != NO_CALL) {
     var response = {
@@ -202,7 +202,7 @@ function incomingCall(message) {
   }
 }
 
-function register() {
+const register = () => {
   var name = document.getElementById('name').value;
   if (name == '') {
     window.alert("You must insert your user name");
@@ -219,7 +219,7 @@ function register() {
   document.getElementById('peer').focus();
 }
 
-function call() {
+const call = () => {
   if (document.getElementById('peer').value == '') {
     window.alert("You must specify the peer name");
     return;
@@ -259,7 +259,7 @@ function call() {
 
 }
 
-function stop(message) {
+const stop = (message) => {
   setCallState(NO_CALL);
   if (webRtcPeer) {
     webRtcPeer.dispose();
@@ -275,13 +275,13 @@ function stop(message) {
   hideSpinner(videoInput, videoOutput);
 }
 
-function sendMessage(message) {
+const sendMessage = (message) => {
   var jsonMessage = JSON.stringify(message);
   console.log('Senging message: ' + jsonMessage);
   ws.send(jsonMessage);
 }
 
-function onIceCandidate(candidate) {
+const onIceCandidate = (candidate) => {
   console.log('Local candidate' + JSON.stringify(candidate));
 
   var message = {
@@ -291,14 +291,14 @@ function onIceCandidate(candidate) {
   sendMessage(message);
 }
 
-function showSpinner() {
+const showSpinner = () => {
   // for (var i = 0; i < arguments.length; i++) {
   //   arguments[i].poster = './img/transparent-1px.png';
   //   arguments[i].style.background = 'center transparent url("./img/spinner.gif") no-repeat';
   // }
 }
 
-function hideSpinner() {
+const hideSpinner = () => {
   for (var i = 0; i < arguments.length; i++) {
     arguments[i].src = '';
     // arguments[i].poster = './img/webrtc.png';
