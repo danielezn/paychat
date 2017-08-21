@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'dashboard#index'
   get '*path', to: 'dashboard#index'
   namespace :api, :defaults => {:format => :json}, :path => "", :constraints => {:subdomain => "api"} do
