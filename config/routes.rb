@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
 
       # Conferencias
+      resources :talks
       ## Crear conferencia
       ## Editar conferencia
       ## Cancelar conferencia
