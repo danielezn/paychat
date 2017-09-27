@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: paychat-db
+spec:
+  selector:
+    app: database
+  ports:
+    - port: 5432
+      name: tcp
+      targetPort: 5432

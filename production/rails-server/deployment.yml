@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: paychat
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: paychat
+    spec:
+      containers:
+        - name: paychat
+          image: localhost:5000/user/container/paychat:0000001
+          ports:
+            - name: tcp
+              containerPort: 8000
+          resources:
+            requests:
+              cpu: 0.01
+              memory: "50Mi"
+            limits:
+              cpu: 2
+              memory: "2Gi"
+          env:
+            - name: PASSENGER_APP_ENV
+              value: production
