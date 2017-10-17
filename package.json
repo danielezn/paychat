@@ -20,7 +20,8 @@
     "redux": "^3.7.0",
     "redux-logger": "^3.0.6",
     "webpack": "^3.0.0",
-    "webrtc-adapter": "^4.2.2"
+    "webrtc-adapter": "^4.2.2",
+    "wstunnel": "^1.2.2"
   },
   "license": "MIT"
 }

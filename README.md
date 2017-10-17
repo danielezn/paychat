@@ -13,3 +13,5 @@ FrontEnd
 React SPA
 
 Hacer REadmen
+
+webpack --config webpack.config.dev.js --watch --colors

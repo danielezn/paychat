@@ -21,18 +21,13 @@ development:
   adapter: postgresql
   pool: 5
   timeout: 5000
-  host: paychat-db
+  # host: paychat-db
   port: 5432
   database: paychat_production
-  username: paychat
-  password: paychat
-
 production:
   adapter: postgresql
   pool: 5
   timeout: 5000
-  host: paychat-db
+  # host: paychat-db
   port: 5432
   database: paychat_production
-  username: paychat
-  password: paychat

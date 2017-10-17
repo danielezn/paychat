@@ -299,11 +299,11 @@ const showSpinner = () => {
 }
 
 const hideSpinner = () => {
-  for (var i = 0; i < arguments.length; i++) {
-    arguments[i].src = '';
-    // arguments[i].poster = './img/webrtc.png';
-    arguments[i].style.background = '';
-  }
+  // for (var i = 0; i < arguments.length; i++) {
+  //   arguments[i].src = '';
+  //   // arguments[i].poster = './img/webrtc.png';
+  //   arguments[i].style.background = '';
+  // }
 }
 
 /**

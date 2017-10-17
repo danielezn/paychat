@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'eval-source-map',
   context: __dirname,
-  entry: ['./app/frontend/javascripts/main.js','./app/frontend/javascripts/rtc.js'],
+  entry: ['./app/frontend/javascripts/main.js','./app/frontend/javascripts/utils/rtc.js'],
   output: {
     path: path.join(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js',
