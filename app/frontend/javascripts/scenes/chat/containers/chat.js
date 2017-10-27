@@ -10,7 +10,7 @@ class App extends Component {
   };
   render() {
     return (
-      <Chat props={...this.state} />
+      <Chat props={...this.props} />
     );
   }
 }

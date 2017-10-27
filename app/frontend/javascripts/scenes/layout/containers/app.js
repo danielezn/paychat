@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import actions from '../../redux/actions';
+import actions from '../actions';
 
 class App extends Component {
   static propTypes = {
