@@ -1,16 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import actions from '../../redux/actions';
+import actions from '../actions';
 import { Chat } from '../components/chat';
 
-class App extends Component {
+class ChatContainer extends Component {
   static propTypes = {
     state: PropTypes.object.isRequired
   };
   render() {
     return (
-      <Chat props={...this.props} />
+      <Chat {...this.props} />
     );
   }
 }
@@ -27,4 +27,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(ChatContainer);

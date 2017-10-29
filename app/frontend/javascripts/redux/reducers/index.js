@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { layout } from '../../scenes/layout/reducers';
 import { authentication } from '../../scenes/authentication/reducers';
-import { chat } from '../../scenes/chat/reducers';
-import { settings } from '../../scenes/settings/reducers';
+import { talk } from '../../scenes/talk/reducers';
+import { dashboard } from '../../scenes/dashboard/reducers';
 
 let reducer = (state = {}, action) => {
 	switch (action.type) {
@@ -12,10 +12,7 @@ let reducer = (state = {}, action) => {
 };
 
 const rootReducer = combineReducers({
-	layout,
-  authentication,
-  chat,
-  settings
+  authentication
 });
 
 export default rootReducer;

@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import actions from '../../redux/actions';
 
 export const Chat = (props) => {
   return (

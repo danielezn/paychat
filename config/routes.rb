@@ -37,6 +37,7 @@ Rails.application.routes.draw do
     ## Registrar actividades
     ## Obtener actividades
   end
+
 end
 
 # Token authentication
