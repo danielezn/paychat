@@ -1,11 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map',
   context: __dirname,
-  entry: ['./app/frontend/javascripts/main.js','./app/frontend/javascripts/utils/rtc.js'],
+  entry: ['./app/frontend/javascripts/main.js'],
   output: {
     path: path.join(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js',
@@ -24,10 +23,6 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
-      },
-       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css!sass')
       }
     ]
   }

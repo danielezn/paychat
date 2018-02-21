@@ -1,34 +1,40 @@
 import React, { Component } from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Link
+} from 'react-router-dom';
 import { routes } from '../../../routes';
-import { BrowserRouter, Route, Link } from 'react-router-dom'
-
-
-import NotFoundPage from '../../others/containers';
-import Home from '../../home/containers';
-import Dashboard from '../../dashboard/containers';
-import Talk from '../../talk/containers';
-import RequireAuth from '../../authentication/containers/require-auth';
 
 
 export const App = () => {
-
   return (
     <div>
       <p>Header here</p>
-
       <div className="container">
-        <BrowserRouter>
+        <Router>
           <div>
             <ul>
+              <li><Link to="/">Home</Link></li>
               <li><Link to="/talks">Charlas</Link></li>
               <li><Link to="/dashboard">Panel</Link></li>
+              <li><Link to="/404">404</Link></li>
             </ul>
-            <Route path="/" component={Home} />
-            <Route path="/talks" component={Talk} />
-            <Route path="dashboard" component={RequireAuth(Dashboard)} />
-            <Route path="*" component={NotFoundPage} />
+            <Switch>
+              {
+                routes.map((route, i) =>
+                  <Route
+                    key={i}
+                    path={route.path}
+                    component={() => <route.component/>}
+                    exact={route.exact}
+                  />
+                )
+              }
+            </Switch>
           </div>
-        </BrowserRouter>
+        </Router>
       </div>
 
       <p>Footer here</p>

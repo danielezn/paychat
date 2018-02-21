@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import actions from '../actions';
 import { Chat } from '../components/chat';
 
-class ChatContainer extends Component {
+class TalkContainer extends Component {
   static propTypes = {
     state: PropTypes.object.isRequired
   };
@@ -27,4 +27,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChatContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(TalkContainer);
