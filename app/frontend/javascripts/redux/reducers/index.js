@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { layout } from '../../scenes/layout/reducers';
-import { authentication } from '../../scenes/authentication/reducers';
+import { authentication as auth} from '../../scenes/authentication/reducers';
 import { talk } from '../../scenes/talk/reducers';
 import { dashboard } from '../../scenes/dashboard/reducers';
 
@@ -12,7 +12,7 @@ let reducer = (state = {}, action) => {
 };
 
 const rootReducer = combineReducers({
-  authentication
+  auth
 });
 
 export default rootReducer;

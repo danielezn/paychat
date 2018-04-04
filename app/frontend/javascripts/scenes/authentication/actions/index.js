@@ -13,7 +13,7 @@ export function errorHandler(dispatch, error, type) {
 
   if(error.data.error) {
     errorMessage = error.data.error;
-  } else if(error.data{
+  } else if(error.data) {
     errorMessage = error.data;
   } else {
     errorMessage = error;

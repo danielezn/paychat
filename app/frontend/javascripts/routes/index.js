@@ -3,11 +3,14 @@ import Home from '../scenes/home/containers';
 import DashboardContainer from '../scenes/dashboard/containers';
 import TalkContainer from '../scenes/talk/containers';
 import RequireAuth from '../scenes/authentication/containers/require-auth';
+import Login from '../scenes/authentication/containers/Login';
+import Register from '../scenes/authentication/containers/Register';
 
 export const routes = [
   {
     path: '/',
     component: Home,
+    exact: true
   },
   {
     path: '/talks',
@@ -17,6 +20,16 @@ export const routes = [
   {
     path: '/dashboard',
     component: DashboardContainer,
+    exact: true
+  },
+  {
+    path: '/login',
+    component: Login,
+    exact: true
+  },
+  {
+    path: '/register',
+    component: Register,
     exact: true
   },
   {

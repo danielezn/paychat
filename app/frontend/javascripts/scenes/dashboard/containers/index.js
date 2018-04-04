@@ -1,9 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {
+    Link
+} from 'react-router-dom';
 
-class DashboardContainer extends Component {
+class DashboardContainer extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     return (
-      <div>Hello world! This is the dashboard</div>
+      <Link to="/talks">Charlas</Link>
     );
   }
 }

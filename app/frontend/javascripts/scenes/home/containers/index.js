@@ -1,9 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {
+    Link
+} from 'react-router-dom';
 
-class Home extends Component {
+class Home extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     return (
-      <div>Este es el homeee</div>
+      <Link to="/talks">Este es el home, ir al Charlas</Link>
     );
   }
 }
