@@ -24,6 +24,8 @@ export class App extends React.Component {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/talks">Charlas</Link></li>
                 <li><Link to="/dashboard">Panel</Link></li>
+                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/register">register</Link></li>
                 <li><Link to="/404">404</Link></li>
               </ul>
               <Switch>

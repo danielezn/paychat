@@ -14,4 +14,4 @@ import reduxThunk from 'redux-thunk';
 // }
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
-export const store = createStoreWithMiddleware(rootReducer);
+export const store = createStoreWithMiddleware(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

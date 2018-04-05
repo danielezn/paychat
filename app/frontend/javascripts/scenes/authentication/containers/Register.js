@@ -58,7 +58,7 @@ class Register extends Component {
     return (
       <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
       {this.renderAlert()}
-      <div className="row">
+      {/*<div className="row">
         <div className="col-md-6">
           <label>First Name</label>
           <Field name="firstName" className="form-control" component={renderField} type="text" />
@@ -67,7 +67,7 @@ class Register extends Component {
           <label>Last Name</label>
           <Field name="lastName" className="form-control" component={renderField} type="text" />
         </div>
-      </div>
+      </div>*/}
         <div className="row">
           <div className="col-md-12">
             <label>Email</label>

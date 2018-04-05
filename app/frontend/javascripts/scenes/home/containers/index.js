@@ -11,7 +11,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <Link to="/talks">Este es el home, ir al Charlas</Link>
+      <div>Hola Yo soy el Home</div>
     );
   }
 }

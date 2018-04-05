@@ -1,4 +1,7 @@
+// Third parties import
 import { combineReducers } from 'redux';
+import { reducer as form } from 'redux-form';
+// Local imports
 import { layout } from '../../scenes/layout/reducers';
 import { authentication as auth} from '../../scenes/authentication/reducers';
 import { talk } from '../../scenes/talk/reducers';
@@ -12,7 +15,8 @@ let reducer = (state = {}, action) => {
 };
 
 const rootReducer = combineReducers({
-  auth
+  auth,
+  form
 });
 
 export default rootReducer;

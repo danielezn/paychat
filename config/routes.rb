@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     as :users do
       post   "/sign-in"       => "sessions#create"
       delete "/sign-out"      => "sessions#destroy"
-      get    "/details"        => "users#details"
+      get    "/details"       => "users#details"
+      post   "/sign-up"       => "users#create"
     end
     ## Autenticacion
     ## Crear Usuario

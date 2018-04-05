@@ -13,15 +13,11 @@ module.exports = {
   resolve: {
     extensions: ['.js']
   },
-  plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
-  ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loaders: 'babel-loader',
         exclude: /node_modules/
       }
     ]
