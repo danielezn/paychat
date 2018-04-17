@@ -39,7 +39,7 @@ export function loginUser({ email, password }) {
     .then(response => {
       cookie.save('token', response.data.auth_token, { path: '/' });
       dispatch({ type: AUTH_USER });
-      window.location.href = '/dashboard';
+      window.location.href = '/talks';
     })
     .catch((error) => {
       errorHandler(dispatch, error.response, AUTH_ERROR)

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'dashboard#index'
   # get '*path', to: 'dashboard#index'
+  # Dashboard
+  resources :dashboard
+  resources :talks
   namespace :api, :defaults => {:format => :json} do
     # Usuario
     # devise_for :users
