@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   root 'dashboard#index'
   # get '*path', to: 'dashboard#index'
   # Dashboard
-  resources :dashboard
-  resources :talks
+  # https://medium.com/@goncalvesjoao/rails-special-route-for-single-page-applications-de9e6bf32199
+  get '*path', to: 'dashboard#index', constraints: -> (request) do
+    !request.xhr? && request.format.html?
+  end
   namespace :api, :defaults => {:format => :json} do
     # Usuario
     # devise_for :users

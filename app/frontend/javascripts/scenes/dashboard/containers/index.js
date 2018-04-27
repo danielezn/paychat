@@ -11,7 +11,7 @@ class DashboardContainer extends React.Component {
 
   render() {
     return (
-      <div>Estas son las charlas</div>
+      <div>Este es el dashboard</div>
     );
   }
 }

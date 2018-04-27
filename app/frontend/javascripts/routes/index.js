@@ -5,6 +5,7 @@ import TalkContainer from '../scenes/talk/containers';
 import RequireAuth from '../scenes/authentication/containers/require-auth';
 import Login from '../scenes/authentication/containers/Login';
 import Register from '../scenes/authentication/containers/Register';
+import Logout from '../scenes/authentication/containers/Logout';
 
 export const routes = [
   {
@@ -30,6 +31,11 @@ export const routes = [
   {
     path: '/register',
     component: Register,
+    exact: true
+  },
+  {
+    path: '/logout',
+    component: Logout,
     exact: true
   },
   {
