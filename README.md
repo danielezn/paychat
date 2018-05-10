@@ -1,3 +1,6 @@
+# RFC
+https://docs.google.com/document/d/1vMTLkvlkJ98870JMXD9FOGysmAyLhP7SH0gaL0gS6zE/edit
+
 # README
 
 Rails

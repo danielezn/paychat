@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
+import ReactDOM from 'react-dom';
 
 export const Chat = (props) => {
   return (
-    <div>Hola soy las charlas</div>
+    <div>Este es el Chat</div>
   );
 }

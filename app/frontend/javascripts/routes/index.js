@@ -20,7 +20,7 @@ export const routes = [
   },
   {
     path: '/dashboard',
-    component: DashboardContainer,
+    component: RequireAuth(DashboardContainer),
     exact: true
   },
   {

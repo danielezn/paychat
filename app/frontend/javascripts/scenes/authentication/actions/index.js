@@ -39,7 +39,7 @@ export function loginUser({ email, password }) {
     .then(response => {
       cookie.save('token', response.data.auth_token, { path: '/' });
       dispatch({ type: AUTH_USER });
-      window.location.href = '/talks';
+      window.location.href = '/dashboard';
     })
     .catch((error) => {
       errorHandler(dispatch, error.response, AUTH_ERROR)
@@ -65,7 +65,6 @@ export function logoutUser() {
   return function (dispatch) {
     dispatch({ type: UNAUTH_USER });
     cookie.remove('token', { path: '/' });
-
     window.location.href = '/login';
   }
 }

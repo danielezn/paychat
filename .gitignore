@@ -17,3 +17,9 @@ node_modules/
 
 # Ignore Webpack Generated Bundle
 app/assets/javascripts/
+
+# Ignore master.key credentials
+
+config/master.key
+# Ignore master key for decrypting credentials and more.
+/config/master.key
