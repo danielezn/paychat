@@ -1,3 +1,1 @@
-# require "opentok"
-
-# opentok = OpenTok::OpenTok.new(ENV.API_KEY, ENV.API_SECRET)
+$opentok = OpenTok::OpenTok.new(Rails.application.credentials.opentok[:api_key], Rails.application.credentials.opentok[:secret])

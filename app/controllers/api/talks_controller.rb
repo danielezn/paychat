@@ -1,4 +1,6 @@
-class TalksController < ApplicationController
+class Api::TalksController < Api::BaseController
+  skip_before_action :require_login!, only: [:create]
+
   def index
   end
 

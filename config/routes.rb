@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '*path', to: 'dashboard#index', constraints: -> (request) do
     !request.xhr? && request.format.html?
   end
+
   namespace :api, :defaults => {:format => :json} do
     # Usuario
     # devise_for :users
