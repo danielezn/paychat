@@ -54,4 +54,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.require_master_key = true
+  config.debug_exception_response_format = :api
 end
