@@ -10,6 +10,10 @@ gem 'puma', '~> 3.7'
 gem 'devise'
 # CORS
 gem 'rack-cors'
+# Twilio video
+gem 'twilio-ruby'
+# faker
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

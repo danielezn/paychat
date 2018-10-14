@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  root 'dashboard#index'
+  # root 'dashboard#index'
   # get '*path', to: 'dashboard#index'
   # Dashboard
   # https://medium.com/@goncalvesjoao/rails-special-route-for-single-page-applications-de9e6bf32199
-  get '*path', to: 'dashboard#index', constraints: -> (request) do
-    !request.xhr? && request.format.html?
-  end
+  # get '*path', to: 'dashboard#index', constraints: -> (request) do
+  #   !request.xhr? && request.format.html?
+  # end
 
   namespace :api, :defaults => {:format => :json} do
     # Usuario
@@ -31,7 +31,12 @@ Rails.application.routes.draw do
 
 
     # Conferencias
-    resources :talks
+    resources :talks do
+      collection do
+        get :token
+      end
+    end
+
     ## Crear conferencia
     ## Editar conferencia
     ## Cancelar conferencia

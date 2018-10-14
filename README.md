@@ -21,4 +21,4 @@ webpack --config webpack.config.dev.js --watch --colors
 
 
 
-Rails.application.credentials.opentok[:api_key]
+PayChat::Application.credentials.ACCOUNT_SID
